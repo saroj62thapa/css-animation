@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .jungle {
+            background: url(./images/jungle.jpg);
+            width: 100%;
+            height: 700px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .tiger {
+            height: 300px;
+            width: 300px;
+            animation-name: anim1;
+            /* animation-duration: 10s; */
+            /* animation-delay: 5s; */
+            animation-timing-function: all;
+            animation-iteration-count: infinite;
+            animation: anim1 5s linear forwards;
+            position: absolute;
+            bottom: 0;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes anim1 {
+            0% {
+                left: -200px;
+                /* Starting position of the tiger */
+            }
+
+            100% {
+                left: calc(100% - 200px);
+                /* Final position of the tiger, moving to the right edge of the jungle */
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jungle">
+        <div class="tiger">
+            <img src="./images/tiger.png" alt="">
+        </div>
+
+    </div>
+</body>
+
+</html>
